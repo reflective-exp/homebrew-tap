@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+bin/dev/update
+bin/dev/doctor
+bin/dev/test
+
+git push
