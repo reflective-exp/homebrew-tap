@@ -2,25 +2,20 @@ class Compostbin < Formula
   desc "Compostbin"
   homepage "https://github.com/reflective-exp/compostbin"
   license "MIT"
-  version "0.12.0"
+  version "0.14.0"
 
   on_arm do
     url "https://github.com/reflective-exp/compostbin/releases/download/v#{version}/compostbin-darwin-arm64.tar.gz"
-    sha256 "2199c967d15b09e4e2e842dde5365e360e3a017674d642aa6b55374fd6fa6570"
+    sha256 "2773fc9c622d98e03f0ce5f00cf831a34f9aa3cc62db5cafe3b594ffce77d50e"
   end
 
   def install
     bin.install "compostbin"
     warn <<BREAKING
-    `compostbin` > v0.8.x no longer depends on Apple's `container` CLI, and requires
-    an image re-build before next use.
+    `compostbin` versions < v1.0.0 do not guarantee image compatibility between
+    minor versions. After upgrading, run:
 
-    To clean up old images:
-
-        container stop -a
-        container prune
-        container image rm -a
-        container system stop
+        compostbin build --no-cache
 
 BREAKING
   end
