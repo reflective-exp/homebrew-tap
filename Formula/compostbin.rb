@@ -2,11 +2,11 @@ class Compostbin < Formula
   desc "Compostbin"
   homepage "https://github.com/reflective-exp/compostbin"
   license "MIT"
-  version "0.24.0"
+  version "0.25.0"
 
   on_arm do
     url "https://github.com/reflective-exp/compostbin/releases/download/v#{version}/compostbin-darwin-arm64.tar.gz"
-    sha256 "8e1de5a139d9f36a0b812e1ecc77c8032bb007503811a57d4e9e98be142e48c2"
+    sha256 "a0c55e60d480f201846595ad49d3957e480674d3e6c59dcaedcc12bb8bc690ac"
   end
 
   def install
